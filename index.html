@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitsap AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        #user-input {
+            width: 100%;
+            height: 150px;
+        }
+
+        #submit-button {
+            margin-top: 10px;
+        }
+
+        #ai-response {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kitsap AI</h1>
+
+        <textarea id="user-input" placeholder="Enter text here..."></textarea>
+        <button id="submit-button">Generate AI response</button>
+
+        <div id="ai-response"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
