@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitsap AI</title>
-    <meta name="description" content="Kitsap AI provides AI updates for Kitsap County residents.">
-    <meta name="keywords" content="Kitsap, AI, news, computers">
-    <meta name="author" content="Kitsap AI">
+    <title>Kitsap Baseball</title>
+    <meta name="description" content="Kitsap Baseball provides insight into Kitsap County Baseball.">
+    <meta name="keywords" content="Kitsap, county, baseball, equipment, news">
+    <meta name="author" content="Kitsap Baseball">
     <link rel="stylesheet" href="scripts.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -60,32 +60,47 @@
         }
 
         .hero {
-            height: 100vh;
-            background: url("./images/kitsapApartments.jpg") center/cover no-repeat;
             position: relative;
+            color:#ffffff;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .hero .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            height: 100%;
-            width: 100%;
+            height: 100vh;
+            background: url("./images/KitsapBaseball.png") center/cover no-repeat;
             z-index: 1;
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .hero .content {
-            color: #fff;
+            position: relative;
             z-index: 2;
             text-align: center;
+            color: #ffffff; /* Set text color to white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better readability */
+        }
+
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+        }
+
+        @media screen and (min-width: 768px) {
+            /* Apply styles for screens wider than 768px */
+            .hero .content {
+                font-size: 2rem; /* Adjust font size for larger screens */
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            /* Apply styles for screens wider than 1024px */
+            .hero .content {
+                font-size: 2.5rem; /* Further adjust font size for even larger screens */
+            }
         }
 
         .container {
@@ -187,65 +202,84 @@
         <div id="nav">
             <ul>
                 <li><img src="./images/logo.jpg" alt=""></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
                 <li><a href="">About</a></li>
+                <li><a href="">Feature</a></li>
+                <li><a href="">Popular</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </div>
     </div>
     <div class="hero">
-        <div class="overlay"></div>
+       <div class="overlay"></div>
         <div class="content">
-            <h1>Kitsap AI</h1>
-            <p>AI Kitsap FYI</p>
+            <h1>Kitsap Baseball</h1>
+            <p>Welcome to Home Plate!</p>
         </div>
     </div>
 
     <section class="card">
-        <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">About Kitsap AI</h2>
-        <p style="text-align: center; font-size: 20px; margin-bottom: 20px;">We consolidate Kitsap county, Washington state, and US AI news.</p>
+        <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">About Kitsap Baseball!</h2>
+        <p style="text-align: center; font-size: 20px; margin-bottom: 20px;">We love baseball and Kitsap County!</p>
     </section>
     
     <div id="content">
         <div id="feature">
-            <img src="path_to_feature_image.jpg" alt="Feature Image">
-            <h2>Featured Post: How to Decorate Your Apartment on a Budget</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lorem ac est fermentum elementum.</p>
+            <article class="card">
+                <h2>Baseball Gloves</h2>
+                <h5>choosing the right bat, April 24, 2024</h5>
+                <img src="./images/gloves.png" alt="Image" style="width:100%">
+                <p> When choosing a baseball glove, consider the following factors:
+                    Size: The glove size should match the player's position and age. Younger and infielders typically use smaller gloves, while outfielders and older players use more giant gloves.
+                    Material: Baseball gloves are made from various leather and synthetic materials. Leather gloves offer durability and a better feel for the ball, while synthetic gloves are more affordable and require less maintenance.
+                    Webbing: The webbing on the glove can affect its performance. Closed webbing provides more support for pitchers and infielders, while open webbing offers more visibility for outfielders.
+                    Fit: A properly fitting glove should feel snug but not too tight. It should allow easy movement and flexibility while providing enough padding to protect your hand.
+                    Break-in Period: New gloves often require a break-in period to soften the leather and mold it to your hand. Use glove oil or conditioner to speed up the process and maintain the glove's quality.
+
+                <p>Get your <a href="https://amzn.to/44asOf3">glove</a> today! </p>
+                </p>
+            </article>
         </div>
-        <section class="card">
+        <section id="popular" class="card">
             <h3>Popular Posts</h3>
             <article class="card">
-                <h2>Top 10 Apartment Decorating Ideas</h2>
-                <h5>Nulla facilisi. Fusce volutpat enim sed ante viverra, non bibendum nisl tincidunt. Duis aliquam sapien sed lorem rhoncus, ac ullamcorper quam fermentum.</h5>
-                <img src="path_to_column_1_image.jpg" alt="Column One Image" style="width: 100%;">
-                <p>Donec at quam non lacus fermentum aliquam. Integer dictum arcu ut libero bibendum, vel posuere mauris consequat. Nunc laoreet odio ac lorem ultricies, vel tincidunt sem blandit. Fusce nec nisi eu ex efficitur vehicula. Etiam tempus consectetur dolor, non iaculis tortor efficitur eu.</p>
+                <h2>Metal or Wooden Baseball Bats</h2>
+                <h5>choosing the right bat, April 8, 2024</h5>
+                <img src="./images/Baseball Bat.png" alt="Image" style="width:100%">
+                <p>Baseball bats have undergone significant changes, from traditional wooden bats to modern metal ones. In the early days of baseball, players used bats made of solid wood, typically ash or hickory. These bats were heavy and prone to breaking, leading to the development of more durable materials.
+                    In the 1970s, aluminum bats began to gain popularity due to their lighter weight and increased durability. These bats allowed players to swing faster, resulting in more powerful hits. However, concerns were raised about the safety of aluminum bats, as they were believed to cause the ball to travel at higher speeds, potentially endangering players on the field.
+                    In response to these concerns, baseball leagues began to regulate the use of metal bats, implementing stricter standards to ensure player safety. Today, both wooden and metal bats are used in baseball, each offering its advantages and disadvantages. Wooden bats are favored for their traditional feel and performance, while metal bats are preferred for their durability and power.</p>
             </article>
             <article class="card">
-                <h2>The Benefits of Renting vs. Buying</h2>
-                <h5>Curabitur ultricies magna id tortor accumsan, vel mattis neque hendrerit. Phasellus sed libero eu eros vehicula malesuada. Suspendisse potenti.</h5>
-                <img src="path_to_column_2_image.jpg" alt="Column Two Image" style="width: 100%;">
-                <p>Vestibulum vel velit at nisi efficitur convallis. Aliquam ut tellus vel eros malesuada fringilla. Curabitur fermentum, quam sit amet varius feugiat, sem quam efficitur turpis, id interdum est felis a mi.</p>
+                <h2>Bat Performance</h2>
+                <h5>swing better, April 8, 2024</h5>
+                <img src="./images/BaseballBatPerformance.png" alt="Image" style="width: 100%;">
+                <p>The performance of a baseball bat is influenced by several factors, including its material, length, weight distribution, and barrel design. The science behind baseball bat performance is complex, but understanding these factors can help players choose the right bat for their needs.
+                    One key factor that affects bat performance is the material from which it is made. Wooden bats offer a traditional feel and performance but are prone to breaking and have a smaller sweet spot. Aluminum bats are lightweight and durable, with a more prominent sweet spot, making them ideal for players looking to maximize their power at the plate.
+                    Another critical factor is the length and weight distribution of the bat. Longer bats provide more reach and leverage, allowing players to hit the ball farther, but they can be more challenging to control. Bats with a balanced weight distribution offer more control and accuracy, while end-loaded bats provide more power but require more strength to swing.
+                    The barrel design of a bat also plays a role in its performance. Bats with larger barrels offer a more prominent sweet spot and more power, while bats with smaller barrels provide better bat control and accuracy. The taper of the bat, or the transition from the barrel to the handle, can also affect its performance, with larger tapers providing more power and smaller tapers offering more control.
+                    By understanding these factors, players can choose a baseball bat that maximizes their performance at the plate and helps them succeed on the field.</p>
             </article>
             <article class="card">
-                <h2>How to Make Your Apartment Feel Like Home</h2>
-                <h5>Donec at quam non lacus fermentum aliquam. Integer dictum arcu ut libero bibendum, vel posuere mauris consequat. Nunc laoreet odio ac lorem ultricies, vel tincidunt sem blandit.</h5>
-                <img src="path_to_column_3_image.jpg" alt="Column Three Image" style="width: 100%;">
-                <p>Fusce nec nisi eu ex efficitur vehicula. Etiam tempus consectetur dolor, non iaculis tortor efficitur eu. Proin ac faucibus turpis, sit amet faucibus risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <h2>Home Plate</h2>
+                <h5>it is home, April 9, 2024</h5>
+                <img src="./images/homeplate.png" alt="Image" style="width: 100%;">
+                <p>A home plate is more than just a physical object; it symbolizes home, safety, and belonging. It's the final destination in baseball, where players strive to return after a journey around the bases. The home plate represents the completion of a cycle, a full circle of effort and determination.
+                    Scoring in baseball revolves around home plate. It's the only way to score a run; every player's ultimate goal is to cross that plate safely. Home plate is the focal point of every offensive play; the target players aim for with every bat swing.
+                    Home plate has undergone many changes over the years. From its humble beginnings as a simple square of rubber to the modern pentagonal shape, home plate has evolved to meet the game's needs. Today, home plate is a durable, rubberized slab that can withstand the rigors of the game while providing a clear target for players.</p>
             </article>
         </section>
     </div>
 
     <!-- Footer Section -->
-    <section id="footer" class="footer">
+    <section id="contact" class="footer">
         <div class="container">
             <div class="social-icons mt-4 text-center">
-                <h3>We would greatly appreciate if you would click on Kitsap AI and follow our Facebook page.</h3>
+                <h3>We would greatly appreciate if you would click on Kitsap Baseball and follow our Facebook page.</h3>
 
-                <a href="https://www.facebook.com/kitsapApartments" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/KitsapBaseball/" target="_blank" style="transform: scale(1.75); display: inline-block;"><i class="fab fa-facebook"></i></a>
             </div>
-            <p class="text-center">&copy; 2024 Kitsap AI, All Rights Reserved.</p>
-            <p class="text-center">&copy; Disclaimer: As an Amazon Associate I earn from qualifying purchases.</p>
+            <p class="text-center">&copy; 2024 Kitsap Baseball, All Rights Reserved.</p>
+            <p class="text-center" style="font-size: smaller;">&copy; Disclaimer: this website earns income from qualifying Amazon purchases.</p>
         </div>
     </section>
 
